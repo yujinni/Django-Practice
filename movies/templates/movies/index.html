@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h1 class="index_title">INDEX PAGE</h1>
+
+{% for movie in movies %}
+    <div class="movie_container">
+        <div class="movie_title">{{ movie.title }}</div>
+        <div class="movie_description">{{ movie.description }}</div>
+        <a href="{% url "movies:detail" movie.pk %}" class="detail_btn">Detail</a>
+    </div>
+{% endfor %}
+{% endblock %}
