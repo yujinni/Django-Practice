@@ -33,7 +33,7 @@
                 <div class="logo">SSAFY</div>
                 <a href="{% url "movies:index" %}" class="index">INDEX</a>
                 <a href="{% url "accounts:signup" %}" class="signup">회원 가입</a>
-                <form action="{% url "accounts:logout" %}" method="POST">
+                <form action="{% url "accounts:login" %}" method="POST">
                     {% csrf_token %}
                     <input type="submit" value="로그인" class="login">
                 </form>
